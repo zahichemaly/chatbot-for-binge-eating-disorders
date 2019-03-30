@@ -1,6 +1,5 @@
 # ignoring MacOS Desktop Services Store files
 .DS_Store
 __pycache__/
-# ignoring previews and db file
-preview/
+# ignoring db file
 db/database.db
