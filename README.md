@@ -29,42 +29,42 @@ This repository contains 2 folders:
 Prerequisites
 ---------
 
-- ** Python 3.6.5 (64-Bit) ** (https://www.python.org/downloads/release/python-365/)
-- ** Visual C ++ Build Tools ** (https://visualstudio.microsoft.com/visual-cpp-build-tools/)
-- ** Rasa Core 0.10.2 ** (http://rasa.com/docs/core/installation/)
-- ** Rasa NLU 0.12.13 ** (http://rasa.com/docs/nlu/installation/)
-- ** Ngrok ** (https://ngrok.com/download)
-- ** Telegram ** (https://telegram.org/)
+- **Python 3.6.5 (64-Bit)** (https://www.python.org/downloads/release/python-365/)
+- **Visual C ++ Build Tools** (https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+- **Rasa Core 0.10.2** (http://rasa.com/docs/core/installation/)
+- **Rasa NLU 0.12.13** (http://rasa.com/docs/nlu/installation/)
+- **Ngrok** (https://ngrok.com/download)
+- **Telegram** (https://telegram.org/)
 
 Installation
 ------------
 
-** 1. Install Python 3.6.5 **
+**1. Install Python 3.6.5 **
 
-** 2. Install Visual C ++ Build Tools **
+**2. Install Visual C ++ Build Tools**
 
-** 3. Install Rasa Core through the command line **
+**3. Install Rasa Core through the command line**
 
     pip install rasa_core == 0.10.2
 
-** 4. Install Rasa NLU **
+**4. Install Rasa NLU**
 
     pip install rasa_nlu == 0.12.3
 
-** 5. Add the spacy pipeline to the Rasa NLU **
+**5. Add the spacy pipeline to the Rasa NLU**
 
     pip install rasa_nlu [spacy]
 
-** 5. Add the language model to spacy **
+**5. Add the language model to spacy**
 
     python -m spacy download en_core_web_md
     python -m spacy link en_core_web_md
 
-** 6. Install Ngrok and specify your Authentication Token on https://dashboard.ngrok.com/auth**
+**6. Install Ngrok and specify your Authentication Token on https://dashboard.ngrok.com/auth**
 
     ngrok authtoken <my_token>
 
-** 7. Install plotly **
+**7. Install plotly**
 
     pip install plotly
 
