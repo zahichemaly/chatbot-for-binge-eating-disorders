@@ -1,0 +1,328 @@
+slots:
+  name:
+    type: text
+  age:
+    type: text
+  gender:
+    type: text
+  activity_before:
+    type: text
+  mood_before:
+    type: text
+  thoughts_before:
+    type: text
+  activity_after:
+    type: text
+  mood_after:
+    type: text
+  thoughts_after:
+    type: text
+  date:
+    type: text
+  time:
+    type: text
+  duration:
+    type: text
+  location:
+    type: text
+  is_alone:
+    type: bool
+  food:
+    type: list
+
+  emcard:
+    type: text
+
+  card_activity:
+    type: text
+  card_time:
+    type: text
+  card_duration:
+    type: text
+  card_id:
+    type: text
+
+  crisis_date:
+    type: text
+
+  requested_slot:
+    type: unfeaturized
+
+  user_id:
+    type: text
+
+intents:
+  - start
+  - greet
+  - goodbye
+  - inform
+  - personal_info
+  - ask_cards
+  - ask_crisis
+  - create_card
+  - ask_suggestions
+  - ask_last_crisis
+  - ask_help
+  - helpful
+  - not_helpful
+  - pick_card
+  - need_help
+  - give_up
+  - ask_stats
+  - ask_tips
+
+entities:
+  - name
+  - age
+  - gender
+  - activity
+  - mood
+  - thoughts
+  - date
+  - time
+  - duration
+  - location
+  - is_alone
+  - food
+
+templates:
+  # personal info
+  utter_ask_name:
+    - "Hello! What's your name?"
+    - "Hi! What should I call you?"
+  utter_ask_age:
+    - "How old are you, {name}?"
+  utter_ask_gender:
+    - text: "Are you a male or a female?"
+      buttons:
+      - title: "Male"
+        payload: "/personal_info{\"gender\":\"M\"}"
+      - title: "Female"
+        payload: "/personal_info{\"gender\":\"F\"}"
+  utter_ask_help:
+    - "How can I help you today, {name}?"
+    - "How can I help you, {name}?"
+    - "What can I do for you today {name}?"
+
+  # informing about an episode
+  utter_ask_activity_before:
+    - "What were you doing before the crisis?"
+  utter_ask_mood_before:
+    - "How did you feel back then?"
+    - "How did you feel before you had the crisis?"
+  utter_ask_thoughts_before:
+    - "What were you thinking before you had the crisis?"
+  utter_ask_activity_after:
+    - "What did you do after the crisis?"
+  utter_ask_mood_after:
+    - "How did you feel after that?"
+  utter_ask_thoughts_after:
+    - "What were you thinking after that?"
+  utter_ask_date:
+    - "What date did the crisis occur? (Specify using DD/MM/YY format)"
+  utter_ask_time:
+    - "When did it happend on {date}? (Specify using 24-hour format)"
+  utter_ask_duration:
+    - "How long did it last? (Specify in hours or minutes)"
+  utter_ask_location:
+    - "Where did it occur?"
+  utter_ask_is_alone:
+    - text: "Were you alone during the crisis?"
+      buttons:
+      - title: "Yes"
+        payload: "/inform{\"is_alone\":\"1\"}"
+      - title: "No"
+        payload: "/inform{\"is_alone\":\"0\"}"
+  utter_ask_food:
+    - "What did you eat?"
+    - "What did you eat exactly?"
+  utter_suggest_cards:
+    - text: "Here's some suggestions for pleasant activities that you can do in order to prevent future binge eating episodes. Read the list carefully then choose which activities might be suitable for you."
+      buttons:
+        - title: "Take a walk"
+          payload: "/inform{\"emcard\":\"take a walk\"}"
+        - title: "Watch a movie"
+          payload: "/inform{\"emcard\":\"watch a movie\"}"
+        - title: "Take a long shower"
+          payload: "/inform{\"emcard\":\"take a long shower\"}"
+        - title: "Dance to a favorite song"
+          payload: "/inform{\"emcard\":\"dance to a favorite song\"}"
+        - title: "Go to a concert"
+          payload: "/inform{\"emcard\":\"go to a concert\"}"
+        - title: "Call a friend"
+          payload: "/inform{\"emcard\":\"call a friend\"}"
+        - title: "Surf the internet"
+          payload: "/inform{\"emcard\":\"surf the internet\"}"
+        - title: "Clean your room"
+          payload: "/inform{\"emcard\":\"clean your room\"}"
+        - title: "Buy someone a gift"
+          payload: "/inform{\"emcard\":\"buy someone a gift\"}"
+        - title: "Go hiking"
+          payload: "/inform{\"emcard\":\"go hiking\"}"
+  utter_sorry:
+    - "I'm sorry to hear that."
+    - "I'm sorry."
+    - "Sorry about that."
+  utter_goodbye:
+    - "Take care."
+    - "Talk to you later."
+    - "Bye {name}!"
+    - "Goodbye!"
+  utter_default:
+    - "Sorry, I didn’t understand that."
+    - "I'm sorry, but I didn't understand that."
+  utter_ask_card_activity:
+    - "Please specifiy an activity for your emergency card."
+  utter_ask_card_time:
+    - "When should you participate in the activity '{card_activity}'? (Specify using 24-hour format)"
+  utter_ask_card_duration:
+    - "How long should the activity '{card_activity}' last? (Specify in hours or minutes)"
+
+  # asking help
+  utter_take_it_easy:
+    - text: "Woah! Take it easy!"
+      image: "https://pics.me.me/whoa-there-friendo-lets-calm-down-29948715.png"
+    - text: "Woah! Take it easy!"
+      image: "https://memegenerator.net/img/instances/67751299/lets-all-calm-down-here.jpg"
+    - text: "Let's calm down now!"
+      image: "https://i.imgur.com/39rP8dg.png"
+    
+  utter_ask_current_location:
+    - "Where are you right now?"
+  utter_get_out:
+    - "{location}, I see. Get out of this place. Count to 10 and get back to me."
+    - "{location}, hmm. Get out, breath in and out 10 times slowly, and get back to me."
+    - "Get out as quickly as possible! Count to 10 and get back to me when you're done."
+  utter_ask_next_action:
+    - text: "What should you do next?"
+      buttons:
+        - title: "Use one of my emergency cards"
+          payload: "/pick_card"
+        - title: "Create a new emergency card"
+          payload: "/create_card"
+        - title: "Show my statistics"
+          payload: "/ask_stats"
+        - title: "I don't know, help!"
+          payload: "/need_help"
+        - title: "I can't do it anymore. I need to eat."
+          payload: "/give_up"
+  utter_ask_helpful:
+    - text: "Was this helpful?"
+      buttons:
+      - title: "Yes"
+        payload: "/helpful"
+      - title: "No"
+        payload: "/not_helpful"
+  utter_cheer_up:
+    - "It's going to be okay. Just take a deep breath and come back to me."
+    - "Everthing is going to be alright. Take a short break and forget about it."
+  utter_selected_card:
+    - "Alright! Try {emcard} and get back to me when you're done."
+  utter_glad:
+    - "I'm glad to hear that! Let me know if you need anything else."
+    - "Glad I can help! If you need anything else, don't hesitate to ask!"
+  utter_greet:
+    - "Hello! My name is Max. I'm here to help you deal with binge eating episodes. Here's what you can ask me:\n
+      \u2022 *I had an episode*\n
+      \u2022 *I'm having a crisis*\n
+      \u2022 *Show me my episodes*\n
+      \u2022 *Show me the crisis I had on DD/MM/YY*\n
+      \u2022 *Show me the last episode I had*\n
+      \u2022 *Create a new card*\n
+      \u2022 *Suggest me some cards*\n
+      \u2022 *Show me my cards*\n
+      \u2022 *I need some advice*\n
+      \u2022 *Show me my stats*\n"
+  utter_reminder_help:
+    - "Hey, are you still there?"
+    - "Hey {name}, are you still with me?"
+    - "Hey, come back!"
+    - "Wait {name}, don't go away!"
+    - "Hello, are you still there?"
+    - "Hey, stop what you are doing {name}, and come talk to me!"
+  utter_reminder_cards:
+    - "Hey, did you pick a card yet?"
+    - "Hey {name}, did you choose a card?"
+    - "Take your time {name}, then pick a card and use it."
+
+  # give advice
+  utter_tips:
+    - "*Never skip breakfast.*\nIt helps in giving you a good start physically and mentally."
+    - "*Stay hydrated.*\nDehydration often lead to mood swings, which may affect your appetite."
+    - "*Avoid too much caffeine* as it may be messing with your mood."
+    - "*Never skip meals!*\nSkipping meals slows your progress, disrupts your eating habits and increase the likelihood of another binge."
+    - "*Start exercising.*\nExercise regulates your appetite to help keep your food intake in check and prevent overeating."
+    - "*Listen to music* if you are feeling a bit stressed.\nMusic is a powerful mood-changer. Dance around the house and create some playlists that make you feel good. Avoid listening to sad music if you're upset."
+  utter_fun_facts:
+    - "*Did you know?*\n_A study of 24 older adults found when people drank 500 ml of water before a meal, the number of calories they consumed during the meal dropped by 13%._\n[Water consumption reduces energy intake at a breakfast meal in obese older adults.](https://www.ncbi.nlm.nih.gov/pubmed/18589036/)"
+    - "*Did you know?*\n_A study of 131 people found that practicing yoga for 10 weeks helped improve mental health as well as reduce stress and anxiety._\n[Yoga reduces stress and anxiety.](https://www.ncbi.nlm.nih.gov/pubmed/17544857/)"
+    - "*Did you know?*\n_A study showed that people who ate more vegetables lost more weight and felt less hungry compared to a control group._\n[Weight loss effects from vegetable intake](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4086735/)"
+    - "*Did you know?*\n_Incorporating exercise into your routine can improve your mood and reduce stress levels, which will both help reduce your risk of emotional eating._\n[Exercise for Mental Health](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1470658/)"
+    - "*Did you know?*\n_Mindful eating may help treat binge eating disorder, a condition characterized by recurring episodes of binge eating._\n[Practice Mindful Eating](https://www.ncbi.nlm.nih.gov/pubmed/22938745)"
+
+actions:
+  # reminders
+  - utter_reminder_help
+  - utter_reminder_cards
+  # greet
+  - utter_greet
+  - utter_ask_name
+  - utter_ask_age
+  - utter_ask_gender
+  - utter_ask_help
+  # asking for help
+  - utter_take_it_easy
+  - utter_ask_current_location
+  - utter_get_out
+  - utter_ask_next_action
+  - utter_ask_helpful
+  - utter_cheer_up
+  - utter_selected_card
+  - utter_glad
+  - utter_tips
+  - utter_fun_facts
+  # informing about crisis
+  - utter_ask_activity_before
+  - utter_ask_activity_after
+  - utter_ask_mood_before
+  - utter_ask_mood_after
+  - utter_ask_thoughts_before
+  - utter_ask_thoughts_after
+  - utter_ask_date
+  - utter_ask_time
+  - utter_ask_duration
+  - utter_ask_location
+  - utter_ask_is_alone
+  - utter_ask_food
+  # cards
+  - utter_suggest_cards
+  - utter_ask_card_activity
+  - utter_ask_card_time
+  - utter_ask_card_duration
+  # others
+  - utter_sorry
+  - utter_goodbye
+  - utter_default
+  # custom actions
+  - actions.ActionUser
+  - actions.ActionVerifyUser
+  - actions.ActionCrisis
+  - actions.ActionBefore
+  - actions.ActionAfter
+  - actions.ActionGetCrisis
+  - actions.ActionGetLastCrisis
+  - actions.ActionAddCard
+  - actions.ActionGetCard
+  - actions.ActionCreateCard
+  - actions.ActionPickCard
+  - actions.ActionHelpWithCards
+  - actions.ActionDrawCharts
+  - actions.ActionShowProgress
+  # reminder custom actions
+  - actions.ActionReminderHelp
+  - actions.ActionReminderCards
+  - actions.ActionAskHelpful
+  - actions.ActionAskHelpfulCards
+
+
+

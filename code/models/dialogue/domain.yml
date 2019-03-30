@@ -1,0 +1,418 @@
+%YAML 1.1
+---
+action_factory: null
+action_names:
+- utter_reminder_help
+- utter_reminder_cards
+- utter_greet
+- utter_ask_name
+- utter_ask_age
+- utter_ask_gender
+- utter_ask_help
+- utter_take_it_easy
+- utter_ask_current_location
+- utter_get_out
+- utter_ask_next_action
+- utter_ask_helpful
+- utter_cheer_up
+- utter_selected_card
+- utter_glad
+- utter_tips
+- utter_fun_facts
+- utter_ask_activity_before
+- utter_ask_activity_after
+- utter_ask_mood_before
+- utter_ask_mood_after
+- utter_ask_thoughts_before
+- utter_ask_thoughts_after
+- utter_ask_date
+- utter_ask_time
+- utter_ask_duration
+- utter_ask_location
+- utter_ask_is_alone
+- utter_ask_food
+- utter_suggest_cards
+- utter_ask_card_activity
+- utter_ask_card_time
+- utter_ask_card_duration
+- utter_sorry
+- utter_goodbye
+- utter_default
+- action_add_user
+- action_verify_user
+- action_add_crisis
+- action_before
+- action_after
+- action_get_crisis
+- action_get_last_crisis
+- action_add_card
+- action_get_cards
+- action_create_card
+- action_pick_card
+- action_help_with_cards
+- action_draw_charts
+- action_show_progress
+- action_reminder_help
+- action_reminder_cards
+- action_ask_helpful
+- action_ask_helpful_card
+actions:
+- utter_reminder_help
+- utter_reminder_cards
+- utter_greet
+- utter_ask_name
+- utter_ask_age
+- utter_ask_gender
+- utter_ask_help
+- utter_take_it_easy
+- utter_ask_current_location
+- utter_get_out
+- utter_ask_next_action
+- utter_ask_helpful
+- utter_cheer_up
+- utter_selected_card
+- utter_glad
+- utter_tips
+- utter_fun_facts
+- utter_ask_activity_before
+- utter_ask_activity_after
+- utter_ask_mood_before
+- utter_ask_mood_after
+- utter_ask_thoughts_before
+- utter_ask_thoughts_after
+- utter_ask_date
+- utter_ask_time
+- utter_ask_duration
+- utter_ask_location
+- utter_ask_is_alone
+- utter_ask_food
+- utter_suggest_cards
+- utter_ask_card_activity
+- utter_ask_card_time
+- utter_ask_card_duration
+- utter_sorry
+- utter_goodbye
+- utter_default
+- actions.ActionUser
+- actions.ActionVerifyUser
+- actions.ActionCrisis
+- actions.ActionBefore
+- actions.ActionAfter
+- actions.ActionGetCrisis
+- actions.ActionGetLastCrisis
+- actions.ActionAddCard
+- actions.ActionGetCard
+- actions.ActionCreateCard
+- actions.ActionPickCard
+- actions.ActionHelpWithCards
+- actions.ActionDrawCharts
+- actions.ActionShowProgress
+- actions.ActionReminderHelp
+- actions.ActionReminderCards
+- actions.ActionAskHelpful
+- actions.ActionAskHelpfulCards
+config:
+  store_entities_as_slots: true
+entities:
+- name
+- age
+- gender
+- activity
+- mood
+- thoughts
+- date
+- time
+- duration
+- location
+- is_alone
+- food
+intents:
+- start:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- inform:
+    use_entities: true
+- personal_info:
+    use_entities: true
+- ask_cards:
+    use_entities: true
+- ask_crisis:
+    use_entities: true
+- create_card:
+    use_entities: true
+- ask_suggestions:
+    use_entities: true
+- ask_last_crisis:
+    use_entities: true
+- ask_help:
+    use_entities: true
+- helpful:
+    use_entities: true
+- not_helpful:
+    use_entities: true
+- pick_card:
+    use_entities: true
+- need_help:
+    use_entities: true
+- give_up:
+    use_entities: true
+- ask_stats:
+    use_entities: true
+- ask_tips:
+    use_entities: true
+slots:
+  activity_after:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  activity_before:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  age:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  card_activity:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  card_duration:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  card_id:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  card_time:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  crisis_date:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  date:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  duration:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  emcard:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  food:
+    initial_value: null
+    type: rasa_core.slots.ListSlot
+  gender:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  is_alone:
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
+  location:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  mood_after:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  mood_before:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  name:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  requested_slot:
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  thoughts_after:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  thoughts_before:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  time:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  user_id:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_activity_after:
+  - text: What did you do after the crisis?
+  utter_ask_activity_before:
+  - text: What were you doing before the crisis?
+  utter_ask_age:
+  - text: How old are you, {name}?
+  utter_ask_card_activity:
+  - text: Please specifiy an activity for your emergency card.
+  utter_ask_card_duration:
+  - text: How long should the activity '{card_activity}' last? (Specify in hours or
+      minutes)
+  utter_ask_card_time:
+  - text: When should you participate in the activity '{card_activity}'? (Specify
+      using 24-hour format)
+  utter_ask_current_location:
+  - text: Where are you right now?
+  utter_ask_date:
+  - text: What date did the crisis occur? (Specify using DD/MM/YY format)
+  utter_ask_duration:
+  - text: How long did it last? (Specify in hours or minutes)
+  utter_ask_food:
+  - text: What did you eat?
+  - text: What did you eat exactly?
+  utter_ask_gender:
+  - buttons:
+    - payload: /personal_info{"gender":"M"}
+      title: Male
+    - payload: /personal_info{"gender":"F"}
+      title: Female
+    text: Are you a male or a female?
+  utter_ask_help:
+  - text: How can I help you today, {name}?
+  - text: How can I help you, {name}?
+  - text: What can I do for you today {name}?
+  utter_ask_helpful:
+  - buttons:
+    - payload: /helpful
+      title: 'Yes'
+    - payload: /not_helpful
+      title: 'No'
+    text: Was this helpful?
+  utter_ask_is_alone:
+  - buttons:
+    - payload: /inform{"is_alone":"1"}
+      title: 'Yes'
+    - payload: /inform{"is_alone":"0"}
+      title: 'No'
+    text: Were you alone during the crisis?
+  utter_ask_location:
+  - text: Where did it occur?
+  utter_ask_mood_after:
+  - text: How did you feel after that?
+  utter_ask_mood_before:
+  - text: How did you feel back then?
+  - text: How did you feel before you had the crisis?
+  utter_ask_name:
+  - text: Hello! What's your name?
+  - text: Hi! What should I call you?
+  utter_ask_next_action:
+  - buttons:
+    - payload: /pick_card
+      title: Use one of my emergency cards
+    - payload: /create_card
+      title: Create a new emergency card
+    - payload: /ask_stats
+      title: Show my statistics
+    - payload: /need_help
+      title: I don't know, help!
+    - payload: /give_up
+      title: I can't do it anymore. I need to eat.
+    text: What should you do next?
+  utter_ask_thoughts_after:
+  - text: What were you thinking after that?
+  utter_ask_thoughts_before:
+  - text: What were you thinking before you had the crisis?
+  utter_ask_time:
+  - text: When did it happend on {date}? (Specify using 24-hour format)
+  utter_cheer_up:
+  - text: It's going to be okay. Just take a deep breath and come back to me.
+  - text: Everthing is going to be alright. Take a short break and forget about it.
+  utter_default:
+  - text: Sorry, I didn’t understand that.
+  - text: I'm sorry, but I didn't understand that.
+  utter_fun_facts:
+  - text: "*Did you know?*\n_A study of 24 older adults found when people drank 500\
+      \ ml of water before a meal, the number of calories they consumed during the\
+      \ meal dropped by 13%._\n[Water consumption reduces energy intake at a breakfast\
+      \ meal in obese older adults.](https://www.ncbi.nlm.nih.gov/pubmed/18589036/)"
+  - text: "*Did you know?*\n_A study of 131 people found that practicing yoga for\
+      \ 10 weeks helped improve mental health as well as reduce stress and anxiety._\n\
+      [Yoga reduces stress and anxiety.](https://www.ncbi.nlm.nih.gov/pubmed/17544857/)"
+  - text: "*Did you know?*\n_A study showed that people who ate more vegetables lost\
+      \ more weight and felt less hungry compared to a control group._\n[Weight loss\
+      \ effects from vegetable intake](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4086735/)"
+  - text: "*Did you know?*\n_Incorporating exercise into your routine can improve\
+      \ your mood and reduce stress levels, which will both help reduce your risk\
+      \ of emotional eating._\n[Exercise for Mental Health](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1470658/)"
+  - text: "*Did you know?*\n_Mindful eating may help treat binge eating disorder,\
+      \ a condition characterized by recurring episodes of binge eating._\n[Practice\
+      \ Mindful Eating](https://www.ncbi.nlm.nih.gov/pubmed/22938745)"
+  utter_get_out:
+  - text: '{location}, I see. Get out of this place. Count to 10 and get back to me.'
+  - text: '{location}, hmm. Get out, breath in and out 10 times slowly, and get back
+      to me.'
+  - text: Get out as quickly as possible! Count to 10 and get back to me when you're
+      done.
+  utter_glad:
+  - text: I'm glad to hear that! Let me know if you need anything else.
+  - text: Glad I can help! If you need anything else, don't hesitate to ask!
+  utter_goodbye:
+  - text: Take care.
+  - text: Talk to you later.
+  - text: Bye {name}!
+  - text: Goodbye!
+  utter_greet:
+  - text: "Hello! My name is Max. I'm here to help you deal with binge eating episodes.\
+      \ Here's what you can ask me:\n • *I had an episode*\n • *I'm having a crisis*\n\
+      \ • *Show me my episodes*\n • *Show me the crisis I had on DD/MM/YY*\n • *Show\
+      \ me the last episode I had*\n • *Create a new card*\n • *Suggest me some cards*\n\
+      \ • *Show me my cards*\n • *I need some advice*\n • *Show me my stats*\n"
+  utter_reminder_cards:
+  - text: Hey, did you pick a card yet?
+  - text: Hey {name}, did you choose a card?
+  - text: Take your time {name}, then pick a card and use it.
+  utter_reminder_help:
+  - text: Hey, are you still there?
+  - text: Hey {name}, are you still with me?
+  - text: Hey, come back!
+  - text: Wait {name}, don't go away!
+  - text: Hello, are you still there?
+  - text: Hey, stop what you are doing {name}, and come talk to me!
+  utter_selected_card:
+  - text: Alright! Try {emcard} and get back to me when you're done.
+  utter_sorry:
+  - text: I'm sorry to hear that.
+  - text: I'm sorry.
+  - text: Sorry about that.
+  utter_suggest_cards:
+  - buttons:
+    - payload: /inform{"emcard":"take a walk"}
+      title: Take a walk
+    - payload: /inform{"emcard":"watch a movie"}
+      title: Watch a movie
+    - payload: /inform{"emcard":"take a long shower"}
+      title: Take a long shower
+    - payload: /inform{"emcard":"dance to a favorite song"}
+      title: Dance to a favorite song
+    - payload: /inform{"emcard":"go to a concert"}
+      title: Go to a concert
+    - payload: /inform{"emcard":"call a friend"}
+      title: Call a friend
+    - payload: /inform{"emcard":"surf the internet"}
+      title: Surf the internet
+    - payload: /inform{"emcard":"clean your room"}
+      title: Clean your room
+    - payload: /inform{"emcard":"buy someone a gift"}
+      title: Buy someone a gift
+    - payload: /inform{"emcard":"go hiking"}
+      title: Go hiking
+    text: Here's some suggestions for pleasant activities that you can do in order
+      to prevent future binge eating episodes. Read the list carefully then choose
+      which activities might be suitable for you.
+  utter_take_it_easy:
+  - image: https://pics.me.me/whoa-there-friendo-lets-calm-down-29948715.png
+    text: Woah! Take it easy!
+  - image: https://memegenerator.net/img/instances/67751299/lets-all-calm-down-here.jpg
+    text: Woah! Take it easy!
+  - image: https://i.imgur.com/39rP8dg.png
+    text: Let's calm down now!
+  utter_tips:
+  - text: "*Never skip breakfast.*\nIt helps in giving you a good start physically\
+      \ and mentally."
+  - text: "*Stay hydrated.*\nDehydration often lead to mood swings, which may affect\
+      \ your appetite."
+  - text: '*Avoid too much caffeine* as it may be messing with your mood.'
+  - text: "*Never skip meals!*\nSkipping meals slows your progress, disrupts your\
+      \ eating habits and increase the likelihood of another binge."
+  - text: "*Start exercising.*\nExercise regulates your appetite to help keep your\
+      \ food intake in check and prevent overeating."
+  - text: "*Listen to music* if you are feeling a bit stressed.\nMusic is a powerful\
+      \ mood-changer. Dance around the house and create some playlists that make you\
+      \ feel good. Avoid listening to sad music if you're upset."

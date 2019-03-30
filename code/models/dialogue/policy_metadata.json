@@ -1,0 +1,149 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "duration",
+        "date",
+        "time",
+        "gender",
+        "card_id",
+        "name",
+        "emcard",
+        "is_alone",
+        "food",
+        "location",
+        "age"
+      ]
+    },
+    "utter_glad": {
+      "slots": []
+    },
+    "utter_goodbye": {
+      "slots": []
+    },
+    "utter_sorry": {
+      "slots": []
+    },
+    "action_verify_user": {
+      "slots": [
+        "gender",
+        "user_id",
+        "age",
+        "name"
+      ]
+    },
+    "action_get_last_crisis": {
+      "slots": [
+        "duration",
+        "date",
+        "time",
+        "food",
+        "location"
+      ]
+    },
+    "action_pick_card": {
+      "slots": []
+    },
+    "action_add_user": {
+      "slots": [
+        "gender",
+        "user_id",
+        "name",
+        "requested_slot",
+        "age"
+      ]
+    },
+    "action_before": {
+      "slots": [
+        "activity_before",
+        "requested_slot",
+        "mood_before",
+        "thoughts_before"
+      ]
+    },
+    "action_add_crisis": {
+      "slots": [
+        "duration",
+        "time",
+        "date",
+        "requested_slot",
+        "location"
+      ]
+    },
+    "action_after": {
+      "slots": [
+        "duration",
+        "date",
+        "time",
+        "mood_before",
+        "activity_before",
+        "thoughts_before",
+        "mood_after",
+        "requested_slot",
+        "is_alone",
+        "activity_after",
+        "food",
+        "location",
+        "thoughts_after"
+      ]
+    },
+    "action_add_card": {
+      "slots": [
+        "emcard"
+      ]
+    },
+    "action_get_crisis": {
+      "slots": [
+        "date"
+      ]
+    },
+    "action_get_cards": {
+      "slots": []
+    },
+    "action_draw_charts": {
+      "slots": []
+    },
+    "action_create_card": {
+      "slots": [
+        "duration",
+        "time",
+        "card_duration",
+        "requested_slot",
+        "card_time",
+        "card_activity"
+      ]
+    },
+    "action_ask_helpful": {
+      "slots": [
+        "location"
+      ]
+    },
+    "utter_fun_facts": {
+      "slots": []
+    },
+    "utter_ask_next_action": {
+      "slots": []
+    },
+    "utter_suggest_cards": {
+      "slots": []
+    },
+    "utter_greet": {
+      "slots": []
+    },
+    "action_restart": {
+      "slots": []
+    }
+  },
+  "rasa_core": "0.10.2",
+  "max_histories": [
+    2,
+    5,
+    null
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.memoization.MemoizationPolicy",
+    "rasa_core.policies.keras_policy.KerasPolicy",
+    "rasa_core.policies.fallback.FallbackPolicy"
+  ]
+}

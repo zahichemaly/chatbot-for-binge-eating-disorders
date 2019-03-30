@@ -1,0 +1,18 @@
+[
+    {
+        "name": "date DD/MM/YY format",
+        "pattern": "^(0[1-9]|[12][0-9]|3[01])[-:./](0[1-9]|1[012])[-:./][12][0-9]{3}"
+    },
+    {
+        "name": "duration hr/min format",
+        "pattern": "^[1-9]([0-9]*)['h']['hr']|['hrs']|['hours']['min']['minutes']['m']"
+    },
+    {
+        "name": "greet",
+        "pattern": "hey[^\\s]*"
+    },
+    {
+        "name": "time 24-hour format",
+        "pattern": "([01]?[0-9]|2[0-3]):[0-5][0-9]"
+    }
+]
