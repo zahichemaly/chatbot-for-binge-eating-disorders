@@ -63,15 +63,16 @@ Installation
 
 **6. Install Ngrok and specify your Authentication Token on https://dashboard.ngrok.com/auth**
 
-    ngrok authtoken <my_token>
+	`ngrok authtoken <my_token>`
 
 **7. Install plotly**
 
-    pip install plotly
+    `pip install plotly`
 
 
 Configuration
 ------------
+
 **1. First, create the database by launching (in the 'db' directory)**
 
 	`python db_init.py`
