@@ -17,8 +17,8 @@ URL = sys.argv[1] + "/app/webhook"
 PORT = int(sys.argv[2])
 
 input_channel = TelegramInput(
-  access_token = "635231622:AAHOWHmJRp8MnqiSm_pho6i2KPYm-ezvq84", # you get this when setting up a bot
-  verify = "dr_max_bot", # this is your bots username
+  access_token = "123456789:xxxxxxxxxxxxxxxxx_xxxxxxxxxx-xxxxxx", # you get this when setting up a bot
+  verify = "your_bot_username", # this is your bots username
   webhook_url = URL # the url your bot should listen for messages
 )
 

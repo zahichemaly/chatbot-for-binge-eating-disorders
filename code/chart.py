@@ -3,7 +3,7 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 from datetime import datetime
 
-plotly.tools.set_credentials_file(username='zahichemaly', api_key='ZlMftVpKi9qghFCYNcU1')
+plotly.tools.set_credentials_file(username='your_ploly_username', api_key='your_ploly_api_key')
 
 
 def create_chart(t1, t2, t3, t4, title, filename):
