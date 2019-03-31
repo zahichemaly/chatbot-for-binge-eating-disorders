@@ -52,8 +52,7 @@ Installation
 **5. Add the language model to spacy**
 
       python -m spacy download en_core_web_md
-
-      python -m spacy link en_core_web_md
+      python -m spacy link en_core_web_md
 
 **6. Install Ngrok and specify your Authentication Token on https://dashboard.ngrok.com/auth**
 
