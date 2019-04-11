@@ -23,9 +23,9 @@ Here's a preview of a typical converstion with the Telegram bot:
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img src="https://user-images.githubusercontent.com/41119320/55954480-7a044d80-5c67-11e9-990a-e94b6c0749d3.png" width="350" height="600" />|<img src="https://user-images.githubusercontent.com/41119320/55954481-7a044d80-5c67-11e9-8c29-12de96652a69.png" width="350" height="600" />|<img src="https://user-images.githubusercontent.com/41119320/55954482-7a044d80-5c67-11e9-87db-4c8528088df6.png" width="350" height="600" />|
-|<img src="https://user-images.githubusercontent.com/41119320/55954484-7a9ce400-5c67-11e9-9b6d-acc6393ff677.png" width="350" height="600" />|<img src="https://user-images.githubusercontent.com/41119320/55954487-7b357a80-5c67-11e9-81ea-dea4eec99525.png" width="350" height="600" />|<img src="https://user-images.githubusercontent.com/41119320/55954488-7b357a80-5c67-11e9-9b10-4a67325b299b.png" width="350" height="600" />|
-|<img src="https://user-images.githubusercontent.com/41119320/55954489-7b357a80-5c67-11e9-9911-b5be1d56dba7.png" width="350" height="600" />|<img src="https://user-images.githubusercontent.com/41119320/55954490-7c66a780-5c67-11e9-8ed2-3a440819040a.png" width="350" height="600" />||
+|<img src="https://user-images.githubusercontent.com/41119320/55954480-7a044d80-5c67-11e9-990a-e94b6c0749d3.png" width="250" height="450" />|<img src="https://user-images.githubusercontent.com/41119320/55954481-7a044d80-5c67-11e9-8c29-12de96652a69.png" width="250" height="450" />|<img src="https://user-images.githubusercontent.com/41119320/55954482-7a044d80-5c67-11e9-87db-4c8528088df6.png" width="250" height="450" />|
+|<img src="https://user-images.githubusercontent.com/41119320/55954484-7a9ce400-5c67-11e9-9b6d-acc6393ff677.png" width="250" height="450" />|<img src="https://user-images.githubusercontent.com/41119320/55954487-7b357a80-5c67-11e9-81ea-dea4eec99525.png" width="250" height="450" />|<img src="https://user-images.githubusercontent.com/41119320/55954488-7b357a80-5c67-11e9-9b10-4a67325b299b.png" width="250" height="450" />|
+|<img src="https://user-images.githubusercontent.com/41119320/55954489-7b357a80-5c67-11e9-9911-b5be1d56dba7.png" width="250" height="450" />|<img src="https://user-images.githubusercontent.com/41119320/55954490-7c66a780-5c67-11e9-8ed2-3a440819040a.png" width="250" height="450" />||
 
 
 Prerequisites
